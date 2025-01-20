@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.name-animation {
+  animation: slideIn 0.5s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.nav-link {
+  @apply text-[#ababab] hover:text-[#ff6b7f] transition-colors duration-300;
+}
+
+.nav-link.active {
+  @apply text-[#ff004f];
+}
+
+.skill-icon {
+  @apply w-20 h-20 mx-auto mb-2 transition-transform duration-300 hover:scale-110;
+}
+
+.project-card {
+  @apply bg-[#1a1a1a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105;
+}
+
+.social-button {
+  @apply flex items-center gap-2 px-6 py-3 rounded-lg transition-colors duration-300;
+}
+
+body {
+  @apply bg-[#000000] text-white;
+}
+
+.pagination-button {
+  @apply px-4 py-2 rounded-lg transition-colors duration-300;
+}
+
+.pagination-button.active {
+  @apply bg-[#ff004f] text-white;
+}
+
+.pagination-button:not(.active) {
+  @apply text-[#ababab] hover:text-[#ff6b7f];
+}
